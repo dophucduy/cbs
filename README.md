@@ -4,7 +4,6 @@ Your README is a good architecture overview, but for “first code” you need a
 1. Freeze MVP scope: `Auth`, `Book Ride`, `View Booking Status`, `Cancel Booking`.
 2. Split codebases early:
    - `mobile-app` (Flutter or React Native)
-   - `backend-api` (modular monolith with your 5 layers)
 3. Design v1 domain:
    - `User`, `Driver`, `Vehicle`, `Booking`, `Location`, `Payment`
 4. Implement backend vertical slice first:
@@ -18,51 +17,7 @@ Your README is a good architecture overview, but for “first code” you need a
 
 **Backend Starter Structure**
 ```txt
-backend-api/
-  src/
-    controllers/
-      AuthController.ts
-      BookingController.ts
-    services/
-      AuthService.ts
-      BookingService.ts
-    domain/
-      entities/
-        User.ts
-        Booking.ts
-      enums/
-        BookingStatus.ts
-      rules/
-        BookingPolicy.ts
-    repositories/
-      UserRepository.ts
-      BookingRepository.ts
-    infrastructure/
-      security/
-        JwtProvider.ts
-      persistence/
-        PrismaUserRepository.ts
-        PrismaBookingRepository.ts
-    config/
-      app.ts
-      env.ts
-```
 
-**Mobile Starter Structure**
-```txt
-mobile-app/
-  src/
-    features/
-      auth/
-        login_screen.dart
-        auth_api.dart
-      booking/
-        create_booking_screen.dart
-        booking_status_screen.dart
-        booking_api.dart
-    core/
-      network/http_client.dart
-      storage/token_storage.dart
 ```
 
 **What To Code In Order (First 7 Days)**
